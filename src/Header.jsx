@@ -1,7 +1,8 @@
 function Header() {
   return (
     <div>
-      Menu
+      <p>Totally Not Poison</p>
+      <p>Bar & Grille</p>
     </div>
   )
 }

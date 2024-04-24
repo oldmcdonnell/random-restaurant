@@ -16,6 +16,8 @@ import ErrorPage from './ErrorPage'
 import Header from './Header'
 import Footer from './Footer'
 import MyNavbar from './MyNavbar'
+import Menu from './Menu'
+import Contact from './Contact'
 
 const site = import.meta.env.BASE_URL
 
@@ -24,7 +26,7 @@ function Layout() {
   return (
       <>
         <Header />
-        <NavBar />
+        <MyNavbar />
         <div id='page-content'>
           <Outlet />
         </div>
@@ -46,6 +48,14 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <About />
+      },
+      {
+        path: '/Menu',
+        element: <Menu />
+      },
+      {
+        path: '/Contact',
+        element: <Contact />
       },
     ]
   }
