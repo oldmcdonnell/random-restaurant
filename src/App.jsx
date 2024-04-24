@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import API from './API'
 
 const Title = () => {
   return (
@@ -9,6 +10,7 @@ const Title = () => {
 }
 
 function App() {
+  API()
   return (
     <div className="p-5">
       <Link to='/about'>About</Link>
