@@ -14,10 +14,12 @@ async function promiseApiData(){
 }
 
 
-async function API (){
+async function API (setFoodItemList){
     const result = await promiseApiData()
     //console.log('API:', result)
-    return result
+    if (result){
+        setFoodItemList(result?.data)
+    }
 }
 
 export default API

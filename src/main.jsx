@@ -9,6 +9,7 @@ import {
 // project styles
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
+import './css/styles.css'
 
 import About from './About'
 import App from './App'
