@@ -17,3 +17,10 @@
 .largerFont{
     font-size: 2rem;
 }
+
+.menuStyle {
+    flex-direction: column;
+    container: flex;
+    align-items: center;
+    justify-content: center ;
+}

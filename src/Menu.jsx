@@ -29,12 +29,16 @@ function Menu() {
     // console.log(mapTest)
     console.log(menuFilter)
     return(
-        <div>
+        <div className="container">
+            <div className="p-2"></div>
+            <div className="col-4 mx-auto p-bottom-3">
             <CategorySelect
             catSelect={catSelect}
             setCatSelect={setCatSelect} />
+            </div>
+            <div className="p-2"></div>
             {menuFilter.map(x=> 
-                <div key={`item-${x.id}`} className="col-4"> 
+                <div key={`item-${x.id}`} className="col-4 mx-auto"> 
                     <h4>{x.title}</h4>
                     <p>{x.description}</p>
                     <p>{x.price}</p>
