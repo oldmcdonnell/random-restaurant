@@ -4,16 +4,24 @@
     font: Arial;
     color: rgb(11, 7, 40);
     font-size: large;
-   
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .headerStyle {
     background-color: black;
-    color: rgb(155, 8, 8);
+    color: rgb(185, 76, 76);
     font-size: large;
     font-family: 'Menace', sans-serif;
     text-align: center;  
 }
+.footerStyle {
+    background-color: black;
+    color: rgb(200, 181, 181);
+    font-size: large;
+    font-family: 'Menace', sans-serif;
+    text-align: center;  
+}
+
 .largerFont{
     font-size: 2rem;
 }

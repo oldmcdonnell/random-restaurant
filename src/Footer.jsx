@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <div>
-      Footer
+    <div className="footerStyle">
+     348 E Main St, Lexington, KY
     </div>
   )
 }

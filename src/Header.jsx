@@ -4,15 +4,21 @@ import Col from 'react-bootstrap/Col';
 
 function Header() {
   return (
-    <Container className="headerStyle">
-      <Row>
-        <Col className='largerFont'>Totally Not Poison</Col>
-      </Row>
-            <Row>
-        <Col>Bar & Grille</Col>
-      </Row>
-    </Container>
+      <div className='headerStyle'>
+        <div className='largerFont'>Totally Not Poison</div>
+        <div>Bar & Grille</div>
+      </div>
   );
 }
 
 export default Header
+/*-
+<Container className="headerStyle">
+<Row>
+  <Col className='largerFont'>Totally Not Poison</Col>
+</Row>
+      <Row>
+  <Col>Bar & Grille</Col>
+</Row>
+</Container>
+-*/

@@ -1,7 +1,7 @@
 import axios from "axios"
 
 async function promiseApiData(){
-    const menuDataLink = `https://www.jsonkeeper.com/b/MDXW`
+    const menuDataLink = `https://raw.githubusercontent.com/bootcamp-students/random-restaurant-json/main/foodList.json`
     try {
         const response = await axios.get(menuDataLink)
         const menuInfo = response

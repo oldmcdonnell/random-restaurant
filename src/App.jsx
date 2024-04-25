@@ -4,7 +4,7 @@ import API from './API'
 const Title = () => {
   return (
     <h1>
-      Hello World!
+      
     </h1>
   )
 }
