@@ -1,6 +1,6 @@
 import API from "./API";
+import CategorySelect from "./CategorySelect"
 import { useEffect, useState } from 'react';
-
 
 
 const listItemsFromAPI = ()=>{
@@ -16,10 +16,10 @@ function Menu() {
     }, [])
     let catVal = "Breakfast"
     let spicyLevel = "3"
-    console.log('list', foodItemList[0])
+    console.log('list', foodItemList)
     let foodCat = foodItemList.filter(x=> x.category===catVal)
     
-    console.log('test', foodCat[0]?.id)
+    //console.log('test', foodCat[0]?.id)
     let foodSpice = foodItemList.filter(x=> x.spicy_level> spicyLevel)
     //console.log('spicy', foodSpice)
     
@@ -27,7 +27,10 @@ function Menu() {
     // console.log(mapTest)
 
     return(
-        <div>{foodCat.map(x=> <div className="col-4"> <p>{x.title}</p> <p> {x.description}</p></div>)}</div>
+        <div>
+            <CategorySelect />
+            <div>{foodCat.map(x=> <div className="col-4"> <p key="{title}">{x.title}</p> <p key="{description}"> {x.description}</p></div>)}</div>
+        </div>
     )
 }
 

@@ -3,6 +3,7 @@ html {
 }
 body {
   height: 100%;
+
 }
 #root {
   display: flex;
@@ -12,4 +13,5 @@ body {
 }
 #page-content {
   flex-grow: 2;
+  overflow: scroll;
 }
