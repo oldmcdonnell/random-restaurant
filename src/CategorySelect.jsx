@@ -8,25 +8,27 @@ const options = [
     {
       label: "Appetizer",
       value: "Appetizer",
-      key: "Appetizer",
+      id: 1,
     },
     {
       label: "Breakfast",
       value: "Breakfast",
-      key: "Breakfast",
+      id: 2,
     },
     {
       label: "Lunch",
       value: "Lunch",
-      key: "Lunch",
+      id: 3,
     },
     {
       label: "Dinner",
       value: "Dinner",
-      key: "Dinner",
+      id: 4,
     },
   ];
 
+
+/*-
 class CategorySelect extends React.Component {
     constructor(props) {
         super(props);
@@ -43,19 +45,28 @@ class CategorySelect extends React.Component {
     }
 
     render() {
+        -*/
+
+    const CategorySelect = (props)=> {
+        console.log(props)
+        const handleChange = ((e) => {
+            console.log("Meal Selected", e.target.value);
+            props.setCatSelect({ meal: e.target.value })
+            })
+
         return (
             <div id="CategorySelect">
                 <div className="select-container">
-                    <select value={this.state.meal} onChange={this.handleChange}>
+                    <select value={props.catSelect.meal} onChange={handleChange}>
                     {options.map((option) => (
-                        <option value={option.value}>{option.label}</option>
+                        <option key={option.id} value={option.value}>{option.label}</option>
                     ))}
                     </select>
                 </div>
             </div>
         );
     }
-}
+
   
 export default CategorySelect;
 

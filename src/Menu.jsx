@@ -3,33 +3,43 @@ import CategorySelect from "./CategorySelect"
 import { useEffect, useState } from 'react';
 
 
-const listItemsFromAPI = ()=>{
-    const listItems = API()
-    //console.log(result)
-   // console.log('more exact result',result.data[0])
-}
 
 function Menu() {
     const [foodItemList, setFoodItemList] = useState([])
+    const [catSelect, setCatSelect] = useState({meal:"Appetizer"})
+    const [menuFilter, setMenuFilter] = useState(foodItemList.filter(x=> x.category===catSelect))
+
     useEffect(() => {
-        API(setFoodItemList)
+    (async ()=> {const initialMenu = await API()
+    setFoodItemList(initialMenu)
+    })()
     }, [])
-    let catVal = "Breakfast"
-    let spicyLevel = "3"
-    console.log('list', foodItemList)
-    let foodCat = foodItemList.filter(x=> x.category===catVal)
+
+    useEffect(()=>{
+        setMenuFilter(foodItemList.filter(x=> x.category===catSelect.meal))
+    }, [catSelect, foodItemList])
+    //console.log('list', foodItemList)
+    // menuFilter = foodItemList.filter(x=> x.category===catSelect)
     
-    //console.log('test', foodCat[0]?.id)
-    let foodSpice = foodItemList.filter(x=> x.spicy_level> spicyLevel)
+    //console.log('test', foodCat)
+    //let foodSpice = foodItemList.filter(x=> x.spicy_level> spicyLevel)
     //console.log('spicy', foodSpice)
     
     // let mapTest = foodItemList.map((item, value) => item.category)
     // console.log(mapTest)
-
+    console.log(menuFilter)
     return(
         <div>
-            <CategorySelect />
-            <div>{foodCat.map(x=> <div className="col-4"> <p key="{title}">{x.title}</p> <p key="{description}"> {x.description}</p></div>)}</div>
+            <CategorySelect
+            catSelect={catSelect}
+            setCatSelect={setCatSelect} />
+            {menuFilter.map(x=> 
+                <div key={`item-${x.id}`} className="col-4"> 
+                    <h4>{x.title}</h4>
+                    <p>{x.description}</p>
+                    <p>{x.price}</p>
+                </div>)}
+
         </div>
     )
 }
