@@ -18,15 +18,6 @@ function Menu() {
     useEffect(()=>{
         setMenuFilter(foodItemList.filter(x=> x.category===catSelect.meal))
     }, [catSelect, foodItemList])
-    //console.log('list', foodItemList)
-    // menuFilter = foodItemList.filter(x=> x.category===catSelect)
-    
-    //console.log('test', foodCat)
-    //let foodSpice = foodItemList.filter(x=> x.spicy_level> spicyLevel)
-    //console.log('spicy', foodSpice)
-    
-    // let mapTest = foodItemList.map((item, value) => item.category)
-    // console.log(mapTest)
     console.log(menuFilter)
     return(
         <div className="container">
@@ -41,7 +32,7 @@ function Menu() {
                 <div key={`item-${x.id}`} className="col-4 mx-auto"> 
                     <h4>{x.title}</h4>
                     <p>{x.description}</p>
-                    <p>{x.price}</p>
+                    <p>${x.price}</p>
                 </div>)}
 
         </div>
