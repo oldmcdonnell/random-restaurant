@@ -12,13 +12,3 @@ function Header() {
 }
 
 export default Header
-/*-
-<Container className="headerStyle">
-<Row>
-  <Col className='largerFont'>Totally Not Poison</Col>
-</Row>
-      <Row>
-  <Col>Bar & Grille</Col>
-</Row>
-</Container>
--*/

@@ -1,23 +1,49 @@
-import { Link } from "react-router-dom"
-import API from './API'
+//import Comments from "./comments/Comments"
+//import Comments from "./comments/Comments";
 
-const Title = () => {
+function MyForm() {
+  const [formData, setFormdata] = useState({
+    name: "",
+    review: "",
+  });
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormdata({...formData, [name]: value});
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    //submit the form data
+
+    alert(`Submitted data: ${JSON.stringify(formData)}`)
+  }
   return (
-    <h1>
-      
-    </h1>
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        value={formData.name}
+        onChange={handleChange}
+        />
+        <input
+        type="text"
+        name="review"
+        placeholder="Review"
+        value={formData.review}
+        onChange={handleChange}
+        />
+        <button type="submit">Submit</button>
+    </form>
   )
 }
 
-function App() {
-  API()
+const App = () => {
   return (
-    <div className="p-5">
-      <Link to='/about'>About</Link>
-      <Title />
+    <div>
+      <h1>Hello monsterlessons</h1>
     </div>
-  )
-}
+  );
+};
 
-
-export default App
+export default App;[]

@@ -14,7 +14,8 @@ function Menu() {
     setFoodItemList(initialMenu)
     })()
     }, [])
-
+    
+    let spiceSymbol = "🌶️"
     useEffect(()=>{
         setMenuFilter(foodItemList.filter(x=> x.category===catSelect.meal))
     }, [catSelect, foodItemList])
@@ -33,6 +34,7 @@ function Menu() {
                     <h4>{x.title}</h4>
                     <p>{x.description}</p>
                     <p>${x.price}</p>
+                    {/* <p>{x.spicy_level * spiceSymbol}</p> */}
                 </div>)}
 
         </div>

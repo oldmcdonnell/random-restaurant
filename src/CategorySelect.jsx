@@ -25,6 +25,11 @@ const options = [
       value: "Dinner",
       id: 4,
     },
+    {
+      label: "Drink",
+      value: "Drink",
+      id: 5,
+    },
   ];
 
 

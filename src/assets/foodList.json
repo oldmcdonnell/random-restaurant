@@ -4,16 +4,16 @@
     "title": "Eggs Benedict",
     "cuisine_type": "American",
     "category": "Breakfast",
-    "description": "Two poached eggs, Canadian bacon and hollandaise",
+    "description": "A few poached crow eggs, bacon and a yellowish sauce",
     "price": 9.99,
     "spicy_level": 0
   },
   {
     "id": 2,
-    "title": "Beef Satay",
+    "title": "Meat Satay",
     "cuisine_type": "Thai",
     "category": "Appetizer",
-    "description": "Marinated and grilled beef skewers served with a peanut dipping sauce",
+    "description": "Marinated and grilled meat skewers served with a lovely dipping sauce",
     "price": 6.99,
     "spicy_level": 3
   },
@@ -22,7 +22,7 @@
     "title": "Chicken Caesar Salad",
     "cuisine_type": "Italian",
     "category": "Lunch",
-    "description": "A classic salad of romaine lettuce, grilled chicken, croutons, and Caesar dressing",
+    "description": "A salad of locally sourced greens, grilled …chicken?, stale bread, and some sort of dressing",
     "price": 8.99,
     "spicy_level": 1
   },
@@ -31,7 +31,7 @@
     "title": "Pork Tacos",
     "cuisine_type": "Mexican",
     "category": "Dinner",
-    "description": "Two soft tortillas filled with seasoned pork, onions, cilantro, and salsa",
+    "description": "Two soft tortillas filled with heavily seasoned pork, onions, and locally sourced greens",
     "price": 11.99,
     "spicy_level": 2
   },
@@ -40,7 +40,7 @@
     "title": "Green Curry",
     "cuisine_type": "Thai",
     "category": "Dinner",
-    "description": "A spicy Thai curry made with coconut milk, green chilies, chicken, and vegetables",
+    "description": "A spicy Thai curry made with not expired milk, green chilies, chicken, and vegetables",
     "price": 13.99,
     "spicy_level": 4
   },
@@ -49,7 +49,7 @@
     "title": "Bloody Mary",
     "cuisine_type": "American",
     "category": "Drink",
-    "description": "A classic brunch cocktail made with vodka, tomato juice, and spices",
+    "description": "A classic brunch cocktail made with vodka, juice, spices, and more vodka",
     "price": 7.99,
     "spicy_level": 1
   },
@@ -76,7 +76,7 @@
     "title": "Shrimp and Grits",
     "cuisine_type": "Southern",
     "category": "Breakfast",
-    "description": "Buttery grits topped with shrimp, bacon and a spicy Cajun cream sauce",
+    "description": "Buttery grits topped with mudbugs, bacon and a spicy Cajun sauce",
     "price": 12.99,
     "spicy_level": 3
   },
