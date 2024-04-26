@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+//import React from 'react';
+//import Comments from './Comments'
 
 function MyForm() {
   const [formData, setFormdata] = useState({
@@ -15,8 +16,8 @@ function MyForm() {
     event.preventDefault();
     //submit the form data
 
-    alert(`Submitted data: ${JSON.stringify(formData)}`)
-    //alert(`We Totally Understand your`)
+    //alert(`Submitted data: ${JSON.stringify(formData)}`)
+    alert(`We Totally Understand your complaint`)
   }
   return (
     <form onSubmit={handleSubmit}>
@@ -52,4 +53,4 @@ const App = () => {
   );
 };
 
-export default App;[]
+export default App;
