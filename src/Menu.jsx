@@ -30,7 +30,7 @@ function Menu() {
             </div>
             <div className="p-2"></div>
             {menuFilter.map(x=> 
-                <div key={`item-${x.id}`} className="col-4 mx-auto"> 
+                <div key={`item-${x.id}`} className="col-lg-4 mx-auto"> 
                     <h4>{x.title}</h4>
                     <p>{x.description}</p>
                     <p>${x.price}</p>

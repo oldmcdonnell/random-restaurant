@@ -1,5 +1,3 @@
-//import Comments from "./comments/Comments"
-//import Comments from "./comments/Comments";
 import { useState } from "react";
 
 
@@ -18,7 +16,7 @@ function MyForm() {
     //submit the form data
 
     alert(`Submitted data: ${JSON.stringify(formData)}`)
-    //alert(`Submitted data: ${JSON.stringify(formData)}`)
+    //alert(`We Totally Understand your`)
   }
   return (
     <form onSubmit={handleSubmit}>
@@ -43,9 +41,13 @@ function MyForm() {
 
 const App = () => {
   return (
-    <div>
-      <h1>Reviews</h1>
-      <MyForm />
+    <div className="container">
+        <div className="col-4 mx-auto">
+          <h4>Complaints</h4>
+        </div>
+        <div className="col-4 mx-auto">
+        <MyForm />
+        </div>
     </div>
   );
 };

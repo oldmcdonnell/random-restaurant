@@ -7,6 +7,11 @@ body{
     background-color: white;
 }
 
+.imageStyle{
+ height: auto;
+ max-width: 100%;   
+}
+
 .navBar{
     text-decoration: none;
     text-align: center;
