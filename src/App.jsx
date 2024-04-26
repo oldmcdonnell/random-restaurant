@@ -1,6 +1,5 @@
 import { useState } from "react";
-//import React from 'react';
-//import Comments from './Comments'
+
 
 function MyForm() {
   const [formData, setFormdata] = useState({

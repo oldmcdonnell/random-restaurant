@@ -32,26 +32,6 @@ const options = [
     },
   ];
 
-
-/*-
-class CategorySelect extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            meal: "Appetizer",
-        }
-
-        this.handleChange = this.handleChange.bind(this)
-    }
-
-    handleChange(e) {
-    console.log("Meal Selected", e.target.value);
-    this.setState({ meal: e.target.value })
-    }
-
-    render() {
-        -*/
-
     const CategorySelect = (props)=> {
         console.log(props)
         const handleChange = ((e) => {
@@ -74,36 +54,3 @@ class CategorySelect extends React.Component {
 
   
 export default CategorySelect;
-
-/*-
-if (hours < 11){
-        return "Breakfast"
-    } else if ( hours > 11 && hours < 5){
-        return "Lunch" 
-    } else {
-        return "Dinner"
-    }
-
-
-
-const catOptions = [
-
-]
-
-const CategoryButton = () => {
-    //Appetizer Breakfast Dinner Lunch
-    const [category, setCategory] = React.useState()
-    return(
-        <div className="relative m-4">
-        <Dropdown>
-            <Dropdown.Toggle variant="success" id="categoryButton">
-                Category
-            </Dropdown.Toggle>
-        </Dropdown>
-        </div>
-    )
-}
-
-export default CategoryButton
-
--*/
