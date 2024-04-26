@@ -16,8 +16,8 @@ function MyForm() {
     event.preventDefault();
     //submit the form data
 
-    //alert(`Submitted data: ${JSON.stringify(formData)}`)
-    alert(`We Totally Understand your complaint`)
+    alert(`Submitted data: ${JSON.stringify(formData)}`)
+    //alert(`We Totally hear and understand your complaint`)
   }
   return (
     <form onSubmit={handleSubmit}>
