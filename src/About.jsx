@@ -10,7 +10,7 @@ function About() {
       <p>To Make a reservation call my beeper at 555-123-4578 and leave your phone number</p>
       <p>Feel free to bring your own meat from the side of the road and we will cook it!</p>
       </div>
-      <div><img src={healthcode} className='imageStyle'></img></div>
+      <div className='col-lg-4 mx-auto'><img src={healthcode} className='imageStyle'></img></div>
     </div>
   )
 }
