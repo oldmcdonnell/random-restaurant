@@ -1,5 +1,7 @@
 //import Comments from "./comments/Comments"
 //import Comments from "./comments/Comments";
+import { useState } from "react";
+
 
 function MyForm() {
   const [formData, setFormdata] = useState({
@@ -16,6 +18,7 @@ function MyForm() {
     //submit the form data
 
     alert(`Submitted data: ${JSON.stringify(formData)}`)
+    //alert(`Submitted data: ${JSON.stringify(formData)}`)
   }
   return (
     <form onSubmit={handleSubmit}>
@@ -41,7 +44,8 @@ function MyForm() {
 const App = () => {
   return (
     <div>
-      <h1>Hello monsterlessons</h1>
+      <h1>Reviews</h1>
+      <MyForm />
     </div>
   );
 };
