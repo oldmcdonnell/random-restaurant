@@ -6,34 +6,29 @@ const hours = currentTime.getHours().toString().padStart(2, '0');
 
 const options = [
     {
-      label: "Appetizer",
-      value: "Appetizer",
+      label: "Tapas",
+      value: "Tapas",
       id: 1,
     },
     {
-      label: "Breakfast",
-      value: "Breakfast",
+      label: "Edible",
+      value: "Edible",
       id: 2,
     },
     {
-      label: "Lunch",
-      value: "Lunch",
+      label: "Gruel",
+      value: "Gruel",
       id: 3,
     },
     {
-      label: "Dinner",
-      value: "Dinner",
+      label: "Alcohol",
+      value: "Alcohol",
       id: 4,
-    },
-    {
-      label: "Drink",
-      value: "Drink",
-      id: 5,
     },
   ];
 
     const CategorySelect = (props)=> {
-        console.log(props)
+        console.log('Prpos in cat select',props)
         const handleChange = ((e) => {
             console.log("Meal Selected", e.target.value);
             props.setCatSelect({ meal: e.target.value })

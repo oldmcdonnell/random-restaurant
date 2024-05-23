@@ -6,8 +6,8 @@ import { useEffect, useState } from 'react';
 
 function Menu() {
     const [foodItemList, setFoodItemList] = useState([])
-    const [catSelect, setCatSelect] = useState({meal:"Appetizer"})
-    const [menuFilter, setMenuFilter] = useState(foodItemList.filter(x=> x.category===catSelect))
+    const [catSelect, setCatSelect] = useState({meal:"Gruel"})
+    const [menuFilter, setMenuFilter] = useState(foodItemList.filter(x=> x.category===catSelect)) //this was category
 
     useEffect(() => {
     (async ()=> {const initialMenu = await API()
@@ -31,7 +31,7 @@ function Menu() {
             <div className="p-2"></div>
             {menuFilter.map(x=> 
                 <div key={`item-${x.id}`} className="col-lg-4 mx-auto"> 
-                    <h4>{x.title}</h4>
+                    <h4>{x.title}</h4> 
                     <p>{x.description}</p>
                     <p>${x.price}</p>
                     {/* <p>{x.spicy_level * spiceSymbol}</p> */}

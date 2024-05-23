@@ -15,6 +15,7 @@ function MyNavbar() {
             <Link className="text-black-50 px-3 navbar" to="/">Home</Link>
             <Link className="text-black-50 px-3 navbar" to="/Menu">Menu</Link>
             <Link className="text-black-50 px-3 navbar" to="/About">About</Link>
+            <Link className="text-black-50 px-3 navbar" to="/Order">Order</Link>
           </Nav>
         </Navbar.Collapse>
     </Container>

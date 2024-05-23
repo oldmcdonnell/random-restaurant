@@ -19,6 +19,7 @@ import Footer from './Footer'
 import MyNavbar from './MyNavbar'
 import Menu from './Menu'
 import Contact from './Contact'
+import Order from './Order'
 
 const site = import.meta.env.BASE_URL
 
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
       {
         path: '/Contact',
         element: <Contact />
+      },
+      {
+        path: '/Order',
+        element: <Order />
       },
     ]
   }
