@@ -22,10 +22,11 @@ const NewReview = ({ getReviews, selectedFood, selectedCustomer }) => {
   const [review, setReview] = useState('')
 
   const createReview = () => {
-    console.log('parameters ' selectedCustomer, selectedFood, review);
+    console.log('parameters ', selectedCustomer, selectedFood, review);
     axios.post('http://127.0.0.1:8000/customer-reviews/', {
       customer: selectedCustomer,
       food: selectedFood,
+      rating: 0,
       review: review,
     })
     .then(response => {
