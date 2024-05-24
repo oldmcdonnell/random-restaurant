@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import CustomerDropDown from "./CustomerDropDown";
 import FoodDropDown from "./FoodDropDown"
+import { compile } from "sass";
 
 const ReviewsList = ({ reviews }) => {
   return reviews.length > 0 ? (
@@ -31,9 +32,10 @@ const NewReview = ({ getReviews, selectedFood, selectedCustomer }) => {
     })
     .then(response => {
       console.log('review: ', response)
-      if (response.status === 200) {
+      // if (response.status === 200) {
         getReviews()
-      }
+        setReview('')
+      // }
     })
     .catch(error => console.log('ERROR: ', error))
   }
@@ -65,6 +67,7 @@ const App = () => {
 
 
   const getReviews = () => {
+    console.log('get reviews list pulled ')
     axios.get('http://127.0.0.1:8000/customer-reviews/')
       .then(response => {
         setReviews(response.data)
