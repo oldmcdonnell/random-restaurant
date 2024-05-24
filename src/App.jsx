@@ -1,30 +1,15 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import CustomerDropdown from "./CustomerDropDown";
-
-
-// const ReviewsList = ({ reviews }) => {
-//   return reviews.length > 0 ? (
-//     <div>
-//       <h2>Customer Reviews</h2>
-//       {reviews.map(review => {
-//         return (
-//           <div key={review.id}>{review.food} - {review.rating} - {review.review} </div>
-//         )
-//       })}
-//     </div>
-//   ) : null
-// }
-
+import CustomerDropDown from "./CustomerDropDown";
+import FoodDropDown from "./FoodDropDown"
 
 const ReviewsList = ({ reviews }) => {
   return reviews.length > 0 ? (
     <div>
       {reviews.map(review => {
-        return (
-          <>
-          <div key={review.id}>{review.food} - {review.rating} - {review.review} </div>
-          </>
+        return (   
+          <div key={review.id}><h3>{review.customer_name} - {review.food_name} </h3>
+          <p> {review.review} </p> </div>
         )
       })}
     </div>
@@ -33,38 +18,45 @@ const ReviewsList = ({ reviews }) => {
   )
 }
 
-
-const NewReview = ({ getReviews }) => {
+const NewReview = ({ getReviews, selectedFood, selectedCustomer }) => {
   const [review, setReview] = useState('')
 
   const createReview = () => {
+    console.log('parameters ' selectedCustomer, selectedFood, review);
     axios.post('http://127.0.0.1:8000/customer-reviews/', {
-      review: review
+      customer: selectedCustomer,
+      food: selectedFood,
+      review: review,
     })
     .then(response => {
-      console.log('review ', response)
-      if (response.status == 200) {
+      console.log('review: ', response)
+      if (response.status === 200) {
         getReviews()
       }
     })
     .catch(error => console.log('ERROR: ', error))
   }
 return (
-  <div style={({ marginTop: 20 })}>
+  <div style={{ marginTop: 20 }}>
     <h2> Make a Complaint</h2>
     <input
-    onChange={e => setReview(e.target.value)}
-    placeholder="Enter review here"
-    value={review}/>
-
+      onChange={e => setReview(e.target.value)}
+      placeholder="Enter review here"
+      value={review}
+    />
+    <button onClick={() => createReview()}> 
+    Submit Complaint 
+    </button>
   </div>
-
 )
-
 }
 
 const App = () => {
+  const [selectedFood, setSelectedFood] = useState('');
+  const [selectedCustomer, setSelectedCustomer] = useState('');
   const [reviews, setReviews ] = useState([])
+
+
 
   useEffect(() => {
     getReviews()
@@ -88,8 +80,10 @@ const App = () => {
           <h4>Complaints</h4>
         </div>
         <div className="col-4 mx-auto">
-          <CustomerDropdown />
           <ReviewsList reviews={reviews} />
+          <CustomerDropDown selectedCustomer={selectedCustomer} setSelectedCustomer={setSelectedCustomer} />
+          <FoodDropDown selectedFood={selectedFood} setSelectedFood={setSelectedFood} />
+          <NewReview selectedCustomer = {selectedCustomer} selectedFood={selectedFood} getReviews={getReviews} />
         </div>
     </div>
   );

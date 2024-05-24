@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const FoodDropdown = () => {
+const FoodDropDown = ({ selectedFood, setSelectedFood }) => {
   const [foods, setFoods] = useState([]);
-  const [selectedFood, setSelectedFood] = useState('');
+
 
   useEffect(() => {
     // Fetch food items from the API using Axios
@@ -35,4 +35,4 @@ const FoodDropdown = () => {
   );
 };
 
-export default FoodDropdown;
+export default FoodDropDown;

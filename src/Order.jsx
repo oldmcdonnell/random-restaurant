@@ -1,8 +1,8 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import FoodDropdown from "./FoodDropDown"
-import CustomerDropdown from "./CustomerDropDown"
+import FoodDropDown from "./FoodDropDown"
+import CustomerDropDown from "./CustomerDropDown"
 
 const Title = () => {
   return (
@@ -37,8 +37,8 @@ function Order() {
   return (
     <div className="p-5">
       {/* <FoodList food={food}/> */}
-      <FoodDropdown />
-      <CustomerDropdown />
+      <FoodDropDown />
+      <CustomerDropDown />
     </div>
   )
 }
