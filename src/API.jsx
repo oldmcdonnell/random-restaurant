@@ -1,26 +1,25 @@
-import axios from "axios"
+import axios from "axios";
 
-async function promiseApiData(){
-    // const menuDataLink = 'https://raw.githubusercontent.com/oldmcdonnell/restaurant_JSON/main/foodList.json'
-    //const menuDataLink = `https://raw.githubusercontent.com/bootcamp-students/random-restaurant-json/main/foodList.json`
-    const menuDataLink = 'http://127.0.0.1:8000/food/'
+const baseUrl = import.meta.env.VITE_BASE_URL
+
+
+// Function to fetch data from the API
+async function fetchMenuData() {
+    const menuDataLink = `${baseUrl}/food/`;
     try {
-        const response = await axios.get(menuDataLink)
-        const menuInfo = response
-        return menuInfo
-        console.log("success", menuInfo)
-    } catch (error){
-        console.log('get From API Error: ', error)
-        return []
+        const response = await axios.get(menuDataLink);
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching data from API: ', error);
+        return [];
     }
 }
 
-
-async function API (){
-    const result = await promiseApiData()
-    console.log('API:', result)
-    return result?.data
-    
+// Wrapper function to call the fetch function and log the result
+async function API() {
+    const result = await fetchMenuData();
+    console.log('API result:', result);
+    return result;
 }
 
-export default API
+export default API;
